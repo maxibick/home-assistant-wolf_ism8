@@ -1,12 +1,15 @@
-
 {
-    "codeowners": ["@marcschmiedchen"],
-    "config_flow": false,
+    "codeowners": [
+        "@marcschmiedchen"
+    ],
+    "config_flow": true,
     "dependencies": [],
     "documentation": " https://github.com/marcschmiedchen/home-assistant-wolf_ism8",
     "domain": "wolf",
     "iot_class": "local_polling",
-    "name": "Wolf Climate Control ISM8",
-    "requirements": ["wolf-ism8"],
+    "name": "Wolf Climate Control ISM8i",
+    "requirements": [
+        "pywolf8>=0.1"
+    ],
     "version": "1.0.0"
 }

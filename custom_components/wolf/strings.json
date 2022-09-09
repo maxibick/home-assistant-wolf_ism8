@@ -1,0 +1,38 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "[%key:common::config_flow::abort::already_configured_device%]"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "host": "Host",
+                    "port": "Port"
+                },
+                "description": "Enter your host and port where the integration should listen. \nPort can be defined in the ISM8i Interface (default: 12004)",
+                "title": "WOLF ISM8i Connector"
+            },
+            "device": {
+                "data": {
+                    "HG1": "HG1 : Heizgerät 1",
+                    "HG2": "HG2 : Heizgerät 2 (In Kaskade)",
+                    "HG3": "HG3 : Heizgerät 3 (In Kaskade)",
+                    "HG4": "HG4 : Heizgerät 4 (In Kaskade)",
+                    "BM1": "BM1 : Direkter Heizkreis + direktes Warmwasser",
+                    "BM2": "BM2 : Mischerkreis 1 + Warmwasser 1",
+                    "BM3": "BM3 : Mischerkreis 2 + Warmwasser 2",
+                    "BM4": "BM4 : Mischerkreis 3 + Warmwasser 3",
+                    "KM": "KM : Kaskadenmodul",
+                    "MM1": "MM1 : Mischermodul 1",
+                    "MM2": "MM2 : Mischermodul 2",
+                    "MM3": "MM3 : Mischermodul 3",
+                    "SM": "SM : Solarmodul",
+                    "CWL": "CWL : CWL Excellent",
+                    "BWL": "BWL : Heizgerät 1"
+                },
+                "description": "Select your devices",
+                "title": "Select WOLF devices"
+            }
+        }
+    }
+}
