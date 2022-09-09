@@ -3,26 +3,18 @@ from __future__ import annotations
 
 from typing import Final
 
+from homeassistant.backports.enum import StrEnum
+
 DOMAIN: Final = "wolf"
 
-WOLF_DEVICES: Final = [
+DEFAULT_HOST: Final = "0.0.0.0"
+DEFAULT_PORT: Final = 12004
+
+WOLF_DEFAULT_DEVICES: Final = [
     "HG1",
-    "HG2",
-    "HG3",
-    "HG4",
     "BM1",
-    "BM2",
-    "BM3",
-    "BM4",
-    "KM",
-    "MM1",
-    "MM2",
-    "MM3",
-    "SM",
-    "CWL",
-    "BWL",
 ]
-DEVICE_INFO: Final = {
+WOLF_DEVICES: Final = {
     "HG1": ("Heizgerät 1", "Wolf", "TOB, CGB-2 oder MGK-2", "FW1.50"),
     "HG2": ("Heizgerät 2 (In Kaskade)", "Wolf", "TOB, CGB-2 oder MGK-2", "FW1.50"),
     "HG3": ("Heizgerät 3 (In Kaskade)", "Wolf", "TOB, CGB-2 oder MGK-2", "FW1.50"),
@@ -50,6 +42,23 @@ DEVICE_INFO_MODELL: Final = 2
 DEVICE_INFO_SW_VERSION: Final = 3
 
 
-DEFAULT_WOLF_DEVICE: Final = "HG1"
-DEFAULT_PORT: Final = 12004
-DEFAULT_HOST: Final = "0.0.0.0"
+class SensorType(StrEnum):
+    """Datapoint classes according to pywolf8 datapoint types"""
+
+    DPT_SWITCH = "DPT_Switch"
+    DPT_BOOL = "DPT_Bool"
+    DPT_ENABLE = "DPT_Enable"
+    DPT_OPENCLOSE = "DPT_OpenClose"
+    DPT_SCALING = "DPT_Scaling"
+    DPT_VALUE_TEMP = "DPT_Value_Temp"
+    DPT_VALUE_TEMPD = "DPT_Value_Tempd"
+    DPT_TEMPD = "DPT_Tempd"
+    DPT_VALUE_PRES = "DPT_Value_Pres"
+    DPT_POWER = "DPT_Power"
+    DPT_VALUE_VOLUME_FLOW = "DPT_Value_Volume_Flow"
+    DPT_TIMEOFDAY = "DPT_TimeOfDay"
+    DPT_DATE = "DPT_Date"
+    DPT_FLOWRATE_M3 = "DPT_FlowRate_m3/h"
+    DPT_HVACMODE = "DPT_HVACMode"
+    DPT_DHWMODE = "DPT_DHWMode"
+    DPT_HVACCONTRMODE = "DPT_HVACContrMode"
